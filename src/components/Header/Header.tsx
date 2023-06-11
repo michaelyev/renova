@@ -27,9 +27,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-red-400">
+    <header >
       <div className="container ">
-        <nav className="flex justify-between items-center px-5">
+        <nav className="flex justify-between items-center">
           <Link href="/">
             <Image
               src="images/Subtract.svg"

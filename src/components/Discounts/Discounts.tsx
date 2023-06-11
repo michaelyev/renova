@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 const Discounts = () => {
   return (
-    <section className="">
+    <section>
       
       <div className="container">
       <div className="flex-col justify-items-start mt-[128px]">
