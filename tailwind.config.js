@@ -21,7 +21,20 @@ module.exports = {
       },
       backgroundImage: {
         'heroImage': "url('/images/HeroBackgroundImage.png')",
-      }      
+      },
+      fontSize: {
+        '16': '16px',
+        '20': '20px',
+        '48': '48px',
+        '64': '64px',
+        '24': '24px',
+        '40': '40px'
+      },
+      fontWeight: {
+        '900': 900,
+        '700': 700,
+        '500': 500,
+      }
     },
   },
   plugins: [],

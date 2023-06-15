@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const ProductCard = ({imageUrl}) => {
   return (
@@ -13,7 +14,7 @@ const ProductCard = ({imageUrl}) => {
             </div>
             <div className="h-[99px] w-[280px] bg-main1 px-[24px]">
               <h3 className="font-inter font-normal text-base leading-[1.21] text-left  pt-[8px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                <Link href='/productpage'>Alebaster</Link>
               </h3>
 
               <div className="flex justify-between items-center mt-[8px]">

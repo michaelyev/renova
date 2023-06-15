@@ -6,5 +6,10 @@ export const buttonConfig = {
     },
     request: {
         
+    },
+    feedback: {
+        text: 'Leave feedback',
+        icon: false,
+        style: 'border-2 border-additional1 border-solid py-[8px] px-[24px]'
     }
 }

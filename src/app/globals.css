@@ -167,3 +167,42 @@ body{
   margin: 0 auto;
   max-width: 1320px;
 }
+
+/* FontStyles */
+
+.h2{
+    @apply font-darkGrotesque font-bold text-4xl ;
+}
+
+.h3{
+    @apply font-darkGrotesque text-4xl font-bold; 
+}
+
+.h4{
+    @apply font-inter text-40 font-700;
+}
+
+.h5{
+    @apply font-inter text-24 font-700;
+}
+
+.h6 {
+    @apply font-inter text-24 font-500;
+  }
+
+  .p1 {
+    @apply font-inter text-24 font-normal leading-[29px];
+  }
+
+  .p2{
+    @apply font-inter text-20 font-normal;
+  }
+
+  .p3 {
+    @apply font-inter text-16 font-normal; 
+  }
+
+  .productPagePrice {
+        @apply font-inter text-40 font-700; 
+  }
+  
