@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowDown, checkboxesConfigCountertops } from './checkboxesConfig';
+import StyledCheckbox from '@/components/common/styledCheckbox/StyledCheckbox';
 
 const Checkboxes = () => {
   const [expandedIndexes, setExpandedIndexes] = useState([0]);
@@ -22,16 +23,13 @@ const Checkboxes = () => {
             <h3 className="mb-[18px]">{config.title}</h3>
             <ArrowDown onClick={() => handleToggle(index)} />
           </div>
+
           {expandedIndexes.includes(index) && (
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               {config.checkboxes.map((checkbox) => (
-                <div key={checkbox.label}>
-                  <input
-                    type="checkbox"
-                    id={`checkbox-${checkbox.label}`}
-                    checked={checkbox.isChecked}
-                    className="form-checkbox border-solid border-additional2 h-5 w-5"
-                  />
+                
+                <div className='flex items-center' key={checkbox.label}>
+                  <StyledCheckbox />
                   <label
                     htmlFor={`checkbox-${checkbox.label}`}
                     className="ml-2 text-gray-700"
@@ -46,6 +44,7 @@ const Checkboxes = () => {
               </div>
             </div>
           )}
+
         </div>
       ))}
     </>
