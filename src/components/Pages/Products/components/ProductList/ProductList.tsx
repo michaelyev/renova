@@ -3,17 +3,22 @@ import React from 'react'
 import Image from 'next/image';
 import ProductCard from '../ProductCard/ProductCard';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+/* import axios from 'axios'; */
+import { getData } from '../../../../../../api/API';
 
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    (async () => {
+      const data = await getData('/db.json')
+      setProducts(data["productList"])
+    })()
     // Assuming that the public directory is served statically
-    axios.get('/db.json').then(response => {
+    /* axios.get('/db.json').then(response => {
       setProducts(response.data["productList"]);
-    });
+    }); */
   }, []);
 
   console.log(Array.isArray(products))
@@ -24,7 +29,7 @@ const ProductList = () => {
 
         {products.map(product => {
           return(
-            <ProductCard imageUrl={product.imageUrl} />
+            <ProductCard key={product.id} {...product}/>
           )
         })}
         
