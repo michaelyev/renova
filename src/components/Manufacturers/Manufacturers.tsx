@@ -3,34 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavTabs from "../common/navtabs/NavTabs";
+import {navTabsContent} from '../common/navtabs/navtabsconfig'
 
+import { useSelector } from 'react-redux';
 
-
-/* const countertopBrandLogos = [
-  {
-    link: "/cosmos-countertops",
-    logo: "/images/logos/cosmos_logo.svg",
-  },
-  {
-    link: "/bedrosians",
-    logo: "/images/logos/bedrosians_logo.svg",
-  },
-  {
-    link: "/cambria",
-    logo: "/images/logos/cambria_logo.svg",
-  },
-  {
-    link: "/architectual_surfaces",
-    logo: "/images/logos/architectual_surfaces_logo.svg",
-  },
-  {
-    link: "/msi",
-    logo: "/images/logos/msi_logo.svg",
-  },
-]; */
 
 const brandLogos = {
-  countertops: [
+  0 : [
     {
       link: "/cosmos-countertops",
       logo: "/images/logos/cosmos_logo.svg",
@@ -52,7 +31,7 @@ const brandLogos = {
       logo: "/images/logos/msi_logo.svg",
     },
   ],
-  cabinets: [
+  1: [
     {
       link: "/msi",
       logo: "/images/logos/msi_logo.svg",
@@ -74,7 +53,7 @@ const brandLogos = {
       logo: "/images/logos/architectual_surfaces_logo.svg",
     },
   ],
-  tile: [
+  2: [
     {
       link: "/cambria",
       logo: "/images/logos/cambria_logo.svg",
@@ -102,8 +81,9 @@ const brandLogos = {
 
 const Manufacturers = () => {
 
-  const [activeTrade, setActiveTrade] = useState('countertops');
+  const activeTrade = useSelector((state) => state.navtab.activeTab);
 
+  
   return (
     <section>
       <div className="container">
@@ -144,7 +124,7 @@ const Manufacturers = () => {
                 height={160}
               />
             </Link>
-          ))}{" "}
+          ))}
         </div>
       </div>
     </section>
