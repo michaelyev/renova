@@ -10,6 +10,7 @@ const initialState: CheckBoxState = {
     expandedIndexes: [0]
 }
 
+
 const checkBoxSlice = createSlice ({
     name: 'checkbox',
     initialState,
@@ -21,8 +22,9 @@ const checkBoxSlice = createSlice ({
         toggleIndex: (state, action: PayloadAction<number>) => {
             if(state.expandedIndexes.includes(action.payload)){
                 state.expandedIndexes = state.expandedIndexes.filter((item) => item!== action.payload )
+
             } else {
-                state.expandedIndexes.push(action.payload);
+                state.expandedIndexes = [...state.expandedIndexes, action.payload];
             }
         }
     }

@@ -1,13 +1,18 @@
 'use client'
 import React from 'react'
-import { useState } from 'react';
 import { navTabsContent } from './navtabsconfig';
 
-
+//redux toolkit
+import { useSelector, useDispatch } from 'react-redux';
+import { setActiveTab } from '@/app/redux/features/navTabsSlice';
 
 const NavTabs = ({tabName, style, border}) => {
     const tabs =  navTabsContent[tabName]
-    const [activeTab, setActiveTab] = useState(tabs[0].id);
+
+    const activeTab = useSelector((state) => state.navtab.activeTab)
+    const dispatch = useDispatch()
+
+    console.log( tabs)
   return (
     
     <div className={`flex gap-5 ${border? border: 'border-b-2 border-solid border-additional2'}   container`} >
@@ -15,7 +20,7 @@ const NavTabs = ({tabName, style, border}) => {
         {tabs.map(tab => {
             return (
               <div
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => dispatch(setActiveTab(tab.id))}
                 className={`${style ? style : 'py-[16px] px-[24px]' }  ${
                   activeTab === tab.id
                     ? "bg-additional2 text-main1"

@@ -12,8 +12,8 @@ const ProductList = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await getData('/db.json')
-      setProducts(data["productList"])
+      const data = await getData('/countertops.json')
+      setProducts(data["countertops"])
     })()
     // Assuming that the public directory is served statically
     /* axios.get('/db.json').then(response => {

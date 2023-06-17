@@ -19,15 +19,15 @@ export const navTabsContent = {
   ],
   manufacturers: [
     {
-      id: "countertops",
+      id: 0,
       text: "Countertops",
     },
     {
-      id: "cabinets",
+      id: 1,
       text: "Cabinets",
     },
     {
-      id: "tile",
+      id: 2,
       text: "Tile",
     },
   ],

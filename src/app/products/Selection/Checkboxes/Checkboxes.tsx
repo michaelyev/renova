@@ -12,6 +12,7 @@ const Checkboxes = () => {
   const expandedIndexes = useSelector(((state) => state.checkbox.expandedIndexes))
   const dispatch = useDispatch();
 
+  
 
   const handleToggle = (index) => {
     dispatch(toggleIndex(index))
