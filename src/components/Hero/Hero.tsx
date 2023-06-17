@@ -7,15 +7,17 @@ const Hero = () => {
   return (
     <section className="bg-heroImage bg-cover pt-[50px] h-screen">
       <div className="container  ">
-        
-        <Image
-          className="mt-[64px] mb-[16px]"
-          src="images/icons/mdi_location.svg"
-          height={32}
-          width={32}
-          alt="city icon"
-        />
-        <span>Kyiv</span>
+
+        <div className="flex mt-[64px] mb-[16px] items-center">
+          <Image
+            className=""
+            src="images/icons/mdi_location.svg"
+            height={32}
+            width={32}
+            alt="city icon"
+          />
+          <span>Seattle</span>
+        </div>
 
         <h1 className=" font-darkGrotesque font-bold text-4xl leading-tight mb-[32px]">
           Countertops
