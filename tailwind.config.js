@@ -7,11 +7,34 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'custom-gray': '#413535',
+        'main': '#312626',
+        'main1': '#F9F3F2',
+        'additional1': '#E6BEBD',
+        'additional2': '#B28A87',
+        'accent': '#C85048'
       },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'darkGrotesque': ['Darker Grotesque', 'sans-serif']
+      },
+      backgroundImage: {
+        'heroImage': "url('/images/HeroBackgroundImage.png')",
+      },
+      fontSize: {
+        '16': '16px',
+        '20': '20px',
+        '48': '48px',
+        '64': '64px',
+        '24': '24px',
+        '40': '40px'
+      },
+      fontWeight: {
+        '900': 900,
+        '700': 700,
+        '500': 500,
+      }
     },
   },
   plugins: [],
