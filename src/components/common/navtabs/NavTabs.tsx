@@ -12,7 +12,7 @@ const NavTabs = ({tabName, style, border}) => {
     const activeTab = useSelector((state) => state.navtab.activeTab)
     const dispatch = useDispatch()
 
-    console.log( tabs)
+    
   return (
     
     <div className={`flex gap-5 ${border? border: 'border-b-2 border-solid border-additional2'}   container`} >
