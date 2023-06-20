@@ -1,9 +1,15 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['images.dog.ceo'],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/products/',
+        destination: '/products/[...productId]',
+      },
+    ];
+  },
+};
 
-    images: {
-        domains: ['images.dog.ceo'],
-      }
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;

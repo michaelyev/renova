@@ -1,20 +1,22 @@
-'use client'
-import ProductCard from '@/components/Pages/Products/components/ProductCard/ProductCard';
+import React from 'react';
+import Image from 'next/image';
 import Reviews from '@/components/Reviews/Reviews';
 import Button from '@/components/common/button/Button';
-import Image from 'next/image';
-import React from 'react'
+import { useRouter } from 'next/router';
+import { getData } from '../../../../../../api/API';
 
 
+const ProductPage = ({ product }) => {
+  const router = useRouter();
+  const { title } = product;
 
-const ProductPage = () => {
   return (
     <section className="container pt-[108px] pb-[64px]">
       <h3 className='pb-[48px] p1 text-additional2'>Back to Products</h3>
 
       <div className='flex gap-[129px]'>
         <div className='max-w-[538px]'>
-            <h1 className='pb-[16px] h2'>Alebaster White</h1>
+            <h1 className='pb-[16px] h2'>{title}</h1>
             <p className='pb-[32px]'>ID#234259141</p>
             <div className='w-[538px] h-[480px] relative mb-[64px]'>
             <Image src='/images/products/alabaster-white-quartz.jpg' fill/>
@@ -106,6 +108,21 @@ const ProductPage = () => {
 
     </section>
   );
+
+  
+}
+export async function getServerSideProps(context) {
+  const { params } = context;
+  const { productId } = params;
+
+  // Assuming you have a function to fetch the product data from an API or database
+  const product = await getData(productId);
+
+  return {
+    props: {
+      product,
+    },
+  };
 }
 
-export default ProductPage
+export default ProductPage;
