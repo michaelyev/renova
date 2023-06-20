@@ -1,10 +1,11 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import checkBoxReducer from '../features/checkBoxSlice';
-import navTabsSlice from '../features/navTabsSlice';
+import {navTabCategoryReducer, navTabSortReducer } from '../features/navTabsSlice';
 // objects
 const rootReducer = combineReducers({
   checkbox: checkBoxReducer,
-  navtab: navTabsSlice
+  navtabsort: navTabSortReducer,
+  navtabcategory: navTabCategoryReducer
 });
 console.log(rootReducer)
 export default rootReducer;

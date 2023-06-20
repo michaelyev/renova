@@ -19,21 +19,6 @@ export const navTabsContent = {
   ],
   manufacturers: [
     {
-      id: 0,
-      text: "Countertops",
-    },
-    {
-      id: 1,
-      text: "Cabinets",
-    },
-    {
-      id: 2,
-      text: "Tile",
-    },
-  ],
-  portfolio: [
-
-    {
       id: "countertops",
       text: "Countertops",
     },
@@ -43,24 +28,38 @@ export const navTabsContent = {
     },
     {
       id: "tile",
+      text: "Tile",
+    },
+  ],
+  portfolio: [
+    {
+      id: "countertops",
+      text: "Countertops",
+    },
+    {
+      id: "cabinets",
+      text: "Cabinets",
+    },
+    {
+      id: "tile_and_flooring",
       text: "Tile and Flooring",
     },
     {
-        id: 'bathrooms',
+        id: "bathrooms",
         text: 'Bathrooms'
     }
   ],
-  productSearch: [
+  productSort: [
     {
-      id: 'popular',
+      id: "popular",
       text: "Popular"
     },
     {
-      id: 'priceDesc',
+      id: "price_descending",
       text: 'Price Descending'
     },
     {
-      id: 'priceAsc',
+      id: "price_ascending",
       text: 'Price Ascending'
     }
   ]

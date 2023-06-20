@@ -1,15 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import checkBoxSlice from '../features/checkBoxSlice';
-import navTabsSlice from '../features/navTabsSlice';
-// functions
+import {navTabCategoryReducer, navTabSortReducer } from '../features/navTabsSlice';
+
 export const store = configureStore({
   reducer: {
     checkbox: checkBoxSlice,
-    navtab: navTabsSlice
+    navtabcategory: navTabCategoryReducer,
+    navtabsort: navTabSortReducer,
   }
-})
+});
 
-console.log(store)
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
