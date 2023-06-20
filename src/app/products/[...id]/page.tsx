@@ -5,6 +5,8 @@ import Button from '@/components/common/button/Button';
 import Image from 'next/image';
 import React from 'react'
 
+
+
 const ProductPage = () => {
   return (
     <section className="container pt-[108px] pb-[64px]">

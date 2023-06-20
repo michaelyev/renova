@@ -2,14 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import NavTabs from "../common/navtabs/NavTabs";
+import {NavTabsState} from "../common/navtabs/NavTabs";
 import {navTabsContent} from '../common/navtabs/navtabsconfig'
 
-import { useSelector } from 'react-redux';
 
 
 const brandLogos = {
-  0 : [
+  'countertops' : [
     {
       link: "/cosmos-countertops",
       logo: "/images/logos/cosmos_logo.svg",
@@ -31,7 +30,7 @@ const brandLogos = {
       logo: "/images/logos/msi_logo.svg",
     },
   ],
-  1: [
+  'cabinets': [
     {
       link: "/msi",
       logo: "/images/logos/msi_logo.svg",
@@ -53,7 +52,7 @@ const brandLogos = {
       logo: "/images/logos/architectual_surfaces_logo.svg",
     },
   ],
-  2: [
+  'tile': [
     {
       link: "/cambria",
       logo: "/images/logos/cambria_logo.svg",
@@ -81,9 +80,9 @@ const brandLogos = {
 
 const Manufacturers = () => {
 
-  const activeTrade = useSelector((state) => state.navtab.activeTab);
+  const [activeTrade, setActiveTrade] = useState("countertops");
 
-  
+
   return (
     <section>
       <div className="container">
@@ -99,20 +98,9 @@ const Manufacturers = () => {
           </p>
         </div>
 
-        <NavTabs tabName={"manufacturers"} />
+        <NavTabsState tabName={"manufacturers"} onTabChange={setActiveTrade} />
 
-        {/* <div className="flex gap-5 border-b-2 border-solid border-additional2 ">
-        <div onClick={() => setActiveTrade('countertops')} className={`py-[16px] px-[24px] ${activeTrade === 'countertops' ? 'bg-additional2 text-main1' : 'bg-main1 text-additional2'  } `}>
-          Countertops
-        </div>
-        <div onClick={() => setActiveTrade('tile')} className={`py-[16px] px-[24px] ${activeTrade === 'tile' ? 'bg-additional2 text-main1' : 'bg-main1 text-additional2'  } `}>
-          Tiles
-        </div>
-
-        <div onClick={() => setActiveTrade('cabinets')} className={`py-[16px] px-[24px] ${activeTrade === 'cabinets' ? 'bg-additional2 text-main1' : 'bg-main1 text-additional2'  } `}>
-          Kitchen Cabinets
-        </div>
-      </div> */}
+        
 
         <div className="flex max-w-[1096px] mx-auto items-center justify-around flex-wrap mt-[57px]">
           {brandLogos[activeTrade].map((brand, index) => (
