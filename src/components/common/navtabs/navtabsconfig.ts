@@ -32,7 +32,6 @@ export const navTabsContent = {
     },
   ],
   portfolio: [
-
     {
       id: "countertops",
       text: "Countertops",
@@ -42,25 +41,25 @@ export const navTabsContent = {
       text: "Cabinets",
     },
     {
-      id: "tile",
+      id: "tile_and_flooring",
       text: "Tile and Flooring",
     },
     {
-        id: 'bathrooms',
+        id: "bathrooms",
         text: 'Bathrooms'
     }
   ],
-  productSearch: [
+  productSort: [
     {
-      id: 'popular',
+      id: "popular",
       text: "Popular"
     },
     {
-      id: 'priceDesc',
+      id: "price_descending",
       text: 'Price Descending'
     },
     {
-      id: 'priceAsc',
+      id: "price_ascending",
       text: 'Price Ascending'
     }
   ]

@@ -1,6 +1,9 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+import { Providers } from "./redux/provider";
+
+
 //components
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
@@ -20,11 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Header />
-      {children}
-      <Footer />
-        
-        </body>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
+      </body>
     </html>
-  )
+  );
 }
