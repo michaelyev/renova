@@ -14,7 +14,7 @@ const NavTabsState = ({tabName, style, border, onTabChange}) => {
 
     return (
         <div className={`flex gap-5 ${border ? border : 'border-b-2 border-solid border-additional2'}   container`}>
-            {tabs.map(tab => {
+            {tabs.map((tab) => {
                 return (
                     <div
                         key={tab.id}
@@ -64,6 +64,7 @@ const NavTabsRedux = ({tabName, style, border}) => {
         {tabs.map(tab => {
             return (
               <div
+                key={tab.text}
                 onClick={() => handleClick(tab.id)}
                 className={`${style ? style : 'py-[16px] px-[24px]' }  ${
                   (tabName === 'productSort' ? activeTabSort : activeTabCategory) === tab.id

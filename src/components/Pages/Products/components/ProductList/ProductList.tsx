@@ -4,24 +4,37 @@ import Image from 'next/image';
 import ProductCard from '../ProductCard/ProductCard';
 import { useEffect, useState } from 'react';
 /* import axios from 'axios'; */
-import { getData } from '../../../../../../api/API';
-import { useSelector } from 'react-redux';
+import { getData } from '@/api/getData';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setProducts } from '@/app/redux/features/productDataSlice'
 
 const ProductList = () => {
   
   const activeTab = useSelector(state => state.navtabcategory.activeTab);
-  const [products, setProducts] = useState([])
+  // const [products, setProducts] = useState([])
+  const products = useSelector(state => state.productData)
+  const dispatch = useDispatch();
 
+  console.log(products)
   useEffect(() => {
-    (async () => {
+    const fetchData = async () => {
+      const data = await getData(`/${activeTab}.json`);
+      dispatch(setProducts(data[activeTab]));
+      
+    };
+
+    
+    fetchData();
+  }, [activeTab, dispatch]);
+
+
+  /* useEffect(() => { 
+   (async () => {
       const data = await getData(`/${activeTab}.json`)
       setProducts(data[activeTab])
-    })()
-    // Assuming that the public directory is served statically
-    /* axios.get('/db.json').then(response => {
-      setProducts(response.data["productList"]);
-    }); */
-  }, [activeTab]);
+    })()    
+  }, [activeTab]) */
 
 
   return (

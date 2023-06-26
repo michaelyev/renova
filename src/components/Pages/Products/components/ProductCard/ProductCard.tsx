@@ -11,7 +11,7 @@ const ProductCard = (props) => {
     <li>
           <div>
             <div className=" h-[280px] w-[280px]  ">
-              <Image src={props.imageUrl} width={280} height={280}/>
+              <Image alt='' src={props.imageUrl} width={280} height={280}/>
               <div className=" flex justify-center text-main1 text-5xl bg-accent h-[80px] w-[203px] items-center">
                 -20 %
               </div>
@@ -28,6 +28,7 @@ const ProductCard = (props) => {
                 </h4>
                 <h4 className="text-additional2">25$/m2</h4>
                 <Image
+                  alt=''
                   src="/images/icons/discounts_like.svg"
                   width={26}
                   height={26}

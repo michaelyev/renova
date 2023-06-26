@@ -72,9 +72,10 @@ const Footer = () => {
             </a>
 
             <div className="flex justify-end items-center gap-[16px]">
-              {socialIcons.map((icon) => (
-                <Link href="/">
+              {socialIcons.map((icon, i) => (
+                <Link key={i} href="/">
                   <Image
+                    
                     src={icon.src}
                     alt={icon.alt}
                     height={icon.size}

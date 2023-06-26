@@ -1,0 +1,30 @@
+{
+    "id": 1,
+    "manufacturer": {
+        "title": "Manufacturer",
+        "company": "MSI"
+    },
+    "color": {
+        "name": "Color",
+        "title": "ALABASTER WHITE"
+    },
+    "purpose": {
+        "title": "Purpose",
+        "text": "Wall, Countertop"
+    },
+    "surface": {
+        "title": "Style",
+        "style": "Marble - Subtle Veins"
+    },
+    "material": {
+        "title": "Material",
+        "material": "Quartz"
+    },
+    "imageUrl": "/images/products/alebaster-white-quartz.jpg",
+    "price": {
+        "title": "Price",
+        "price": "$20.99/sqft"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "isChecked": false
+}

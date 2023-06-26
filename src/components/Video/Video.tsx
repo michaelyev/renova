@@ -16,7 +16,7 @@ const Video = () => {
         <div className="container">
         
         <div className="mx-auto flex justify-between items-center gap-6">
-          <Image src="/images/Video.png" width={762} height={424} />
+          <Image alt='' src="/images/Video.png" width={762} height={424} />
           <div>
             <ol className="flex flex-col gap-4 list-disc ">
               <li className="mb-[48px]">Huge selection</li>

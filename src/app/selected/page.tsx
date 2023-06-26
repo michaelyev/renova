@@ -17,7 +17,7 @@ const page = () => {
       <div className="flex text-center items-center justify-between mt-[24px] mb-[64px] ">
         <div className="max-w-[762px] h6" >
           <p>
-            You haven't liked any product yet. We have a huge selection. Please
+            You havent liked any product yet. We have a huge selection. Please
             go to the catalog to select something
           </p> 
           <div className="flex justify-center mt-[16px]">

@@ -32,7 +32,7 @@ export default function SelectionFaq() {
         <div>
           {faq.map((ele, i) => {
             return (
-              <div className="max-w-[415px] my-[29px]  ">
+              <div key={i} className="max-w-[415px] my-[29px]  ">
                 <button
                   className="text-left"
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}

@@ -51,9 +51,9 @@ const Ratings = () => {
         </div>
 
         <div className="flex flex-wrap justify-around items-center gap-5 mt-[67px]">
-            {ratings.map(rating => {
+            {ratings.map((rating, i) => {
                 return (
-                    <a href={rating.link}> <Image src={rating.logo} width={315} height={0} alt={rating.logo} /> </a>
+                    <a key={i} href={rating.link}> <Image alt='' src={rating.logo} width={315} height={0} /> </a>
                 )
             })}
         </div>

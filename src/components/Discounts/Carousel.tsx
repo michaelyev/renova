@@ -6,6 +6,7 @@ const Carousel = () => {
       <div className="flex justify-between items-center">
         <div className="mx-auto">
           <Image
+          alt=""
             src="/images/icons/left_arrow_discount.svg"
             width={80}
             height={0}
@@ -31,6 +32,7 @@ const Carousel = () => {
                   </h4>
                   <h4 className="text-additional2">25$/m2</h4>
                   <Image
+                  alt=""
                     src="/images/icons/discounts_like.svg"
                     width={33}
                     height={33}
@@ -58,6 +60,7 @@ const Carousel = () => {
                   </h4>
                   <h4 className="text-additional2">25$/m2</h4>
                   <Image
+                  alt=""
                     src="/images/icons/discounts_like.svg"
                     width={33}
                     height={33}
@@ -85,6 +88,7 @@ const Carousel = () => {
                   </h4>
                   <h4 className="text-additional2">25$/m2</h4>
                   <Image
+                  alt=""
                     src="/images/icons/discounts_like.svg"
                     width={33}
                     height={33}
@@ -97,6 +101,7 @@ const Carousel = () => {
 
         <div className="mx-auto">
           <Image
+          alt=""
             src="/images/icons/right_arrow_discount.svg"
             width={80}
             height={0}

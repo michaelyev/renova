@@ -24,6 +24,7 @@ const Products = () => {
             <button className="items-center flex border-2 border-additional1 border-solid py-[8px] px-[24px] ml-auto">
               Browse catalog
               <Image
+                alt=""
                 className="pl-[8px] flex-row-reverse"
                 src="/images/icons/right_arrow.svg"
                 width={24}

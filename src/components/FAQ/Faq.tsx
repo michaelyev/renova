@@ -20,7 +20,7 @@ const faq = [
 ];
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState('');
 
   return (
     <section className="mt-[128px] h-[500px]">
@@ -32,7 +32,7 @@ export default function Faq() {
         <div>
           {faq.map((ele, i) => {
             return (
-              <div className=" mx-auto my-[29px] items-center   w-[650px]">
+              <div key={i} className=" mx-auto my-[29px] items-center   w-[650px]">
                 <button
                   className={`text-xl ${i === faq.length - 1 ? '' : 'border-b-2 border-additional1' }   text-left items-center flex justify-between pb-[29px]  w-full`}
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -40,6 +40,7 @@ export default function Faq() {
                   {ele.question}{" "}
 
                   <Image
+                  alt=""
                     className="mt-0"
                     src="/images/icons/right_up_arrow.svg"
                     width={24}

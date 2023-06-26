@@ -1,13 +1,19 @@
-'use client'
+
 import ProductCard from '@/components/Pages/Products/components/ProductCard/ProductCard';
 import Reviews from '@/components/Reviews/Reviews';
 import Button from '@/components/common/button/Button';
 import Image from 'next/image';
 import React from 'react'
+import { getData } from '@/api/getData';
+import { useSelector } from 'react-redux';
+//import { useSearchParams } from 'next/navigation'
 
+ const ProductPage = ({params: {id}}:{params:{id:string}}) => {
+  
+  console.log(id)
+  //const activeTab = useSelector(state => state.navtabcategory.activeTab);
 
-
-const ProductPage = () => {
+  //console.log(activeTab)
   return (
     <section className="container pt-[108px] pb-[64px]">
       <h3 className='pb-[48px] p1 text-additional2'>Back to Products</h3>
@@ -17,7 +23,7 @@ const ProductPage = () => {
             <h1 className='pb-[16px] h2'>Alebaster White</h1>
             <p className='pb-[32px]'>ID#234259141</p>
             <div className='w-[538px] h-[480px] relative mb-[64px]'>
-            <Image src='/images/products/alabaster-white-quartz.jpg' fill/>
+            <Image alt='' src='/images/products/alabaster-white-quartz.jpg' fill/>
             </div>
             <h3 className='mb-[32px] h5'>Characteristics</h3>
             <ul className='p1'>
@@ -54,7 +60,7 @@ const ProductPage = () => {
             
         </div>
         <div className='pt-[108px]'>
-          <Image className='pb-[21px]' src='/images/icons/discounts_like.svg' height={33} width={33}/>
+          <Image alt='' className='pb-[21px]' src='/images/icons/discounts_like.svg' height={33} width={33}/>
           <div className="flex items-center mb-[16px]">
           <p className=' mr-[8px] h5'>Status:</p>
           <p className='p1 '> In stock</p>
@@ -63,7 +69,7 @@ const ProductPage = () => {
           <p className='mb-[16px] p1 max-h-[87px]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam tenetur voluptate ut perspiciatis fugiat autem commodi dolorum aperiam aliquid repellat! od. lorem50</p>
           <div className='flex items-center mb-[73px]'>
             <p className='mr-[16px] h5'>Reviews:</p>
-            <Image src='/images/icons/star.svg' height={24} width={24}/>
+            <Image alt='' src='/images/icons/star.svg' height={24} width={24}/>
           </div>
           <div className='flex items-center mb-[152px]'>
             <p className='mr-[32px] h5'>Price:</p>
@@ -105,7 +111,9 @@ const ProductPage = () => {
 
 
     </section>
-  );
-}
+
+  )}
+
+  
 
 export default ProductPage

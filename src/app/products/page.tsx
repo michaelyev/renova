@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../../components/Pages/Products/components/Banner/Banner'
 import {NavTabsRedux} from '@/components/common/navtabs/NavTabs'
 import Selection from './Selection/Selection' 
-import ProductList from '@/components/Pages/Products/components/ProductList/ProductList'
+import ProductList from '@/components/Pages/Products/components/ProductList/ProductList';
 import SelectionFaq from './Selection/SelectionFaq/SelectionFaq'
 import ProductSearch from '@/components/ProductSearch/ProductSearch'
 import ContactForm from '@/components/ContactForm/ContactForm'
